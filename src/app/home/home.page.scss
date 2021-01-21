@@ -25,3 +25,59 @@
 #container a {
   text-decoration: none;
 }
+ion-title
+{
+  font-variant: small-caps;
+  text-align: center;
+}
+
+ion-img
+{
+  width: 4.5cm;
+ margin:0.3cm;
+  
+}
+ion-card
+{
+  
+  background-color:gold;
+  margin-bottom: 1cm;
+ 
+}
+h2{
+  color: black;
+  font-size:medium;
+}
+ion-card-subtitle
+{
+  
+  font-variant: small-caps;
+  margin-top: 0.3cm;
+  margin-bottom: 0.2cm;
+  text-align: center;
+  font-weight:bolder;
+  font-size: medium;
+  color:black;
+}
+ion-card-title
+{
+
+  font-weight:bolder; 
+}
+ion-card-content
+{
+  font-size: medium;
+  font-weight: bolder;
+  font-variant: small-caps;
+ color: black;
+}
+p
+{
+  text-align: center;
+  font-weight:bolder;
+}
+
+ion-input
+{
+  background-color: brown;
+}

@@ -7,16 +7,31 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
- 
-  <ion-card *ngFor="let weathercast of list">
-    
-    <ion-card-header>
-    <ion-card-subtitle>{{weathercast.dt}}</ion-card-subtitle>
-    <ion-card-title>{{weathercast.main}}</ion-card-title>
-    <ion-item>{{weathercast.clouds}}</ion-item>
- </ion-card-header>
 
- <ion-card-content>{{weathercast.snow}}</ion-card-content>
-</ion-card>
+  
+
+  <ion-content class="main">
+    <div class="details">
+    <h2><strong>Weather Conditions</strong></h2>
+    <p>Type the name of the city where you want to check the weather conditions.</p>
+  
+    <form [formGroup] ="weatherForm" (ngSubmit)="search(weatherForm.value)">
+      <ion-input placeholder="Enter City Name" [ngModel]="city"></ion-input>
+  
+      <button class="checkWeather" type="submit" [disabled]="!weatherForm.valid">Submit</button>
+    </form>
+    <div class="weather" *ngIf="weather">
+        <div>   
+            <img [src]="weather.current.condition.icon" />
+            <p class="big">{{weather.current.temp_c}}°</p>
+            <p><strong>{{weather.current.condition.text}}</strong></p> 
+        </div>
+        <div>
+            
+            <p>{{weather.location.name}}, <span>{{weather.location.country}}</span> </p>
+            <p>{{weather.location.localtime}}</p>
+        </div>  
+    </div>
+  </div>
 
 </ion-content>

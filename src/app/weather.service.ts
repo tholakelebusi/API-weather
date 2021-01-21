@@ -9,12 +9,12 @@ const API_KEY=environment.API_KEY;
 })
 export class WeatherService {
 
-  constructor(private http:HttpClient) { }
+  
 
-  getNews(url)
-  {
-    return this.http.get(`${API_URL}/${url}&apiKey=${API_KEY}`)
+  constructor(private httpClient: HttpClient) {}
+
+  getWeatherFromApi(city: string){
+    return this.httpClient.get(`${API_URL}/${city}&apiKey=${API_KEY}`)
   }
-
 }
 

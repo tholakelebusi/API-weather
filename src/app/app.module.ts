@@ -11,13 +11,18 @@ import { AppRoutingModule } from './app-routing.module';
 
 //added
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+
+
+import { FormGroup, FormControl } from '@angular/forms';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule,HttpClientModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule,IonicModule.forRoot(), AppRoutingModule,HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,FormGroup, FormControl],
   providers: [
     StatusBar,
-    HttpClientModule,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
